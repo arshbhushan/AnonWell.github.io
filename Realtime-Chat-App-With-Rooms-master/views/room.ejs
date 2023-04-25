@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <nav>
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AnonWell</title>
+    <script>
+      const roomName = "<%= roomName %>";
+    </script>
+    <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav {
+  /* background-color: #4caf50;
+  color: #fff;
+  padding: 10px;*/
+  background-color: #2154b3;
+  color: #fff;
+  display: flex;
+  text-align: center; 
+  justify-content: space-between;
+  padding: 5px; /* Reduced padding */
+  width: 100%;
+  max-width: 1525px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #2154b3;
+}
+      #message-container {
+        width: 80%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      #message-container div {
+        background-color: #ccc;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 100%;
+        max-width: 600px;
+      }
+
+      #message-container div:nth-child(2n) {
+        background-color: #fff;
+      }
+
+      #message-container p {
+        font-weight: bold;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+      }
+
+      #send-container {
+        position: fixed;
+        bottom: 0;
+        background-color: #fff;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      #message-input {
+        flex-grow: 1;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        margin-right: 10px;
+      }
+
+      #send-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        background-color: #2154b3;
+        color: #fff;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+
+      #send-button:hover {
+        background-color: #2485b3;
+      }
+ </style>
+  </head>
+  <body>
+    <div id="message-container"></div>
+    <form id="send-container">
+      <input type="text" id="message-input" placeholder="Type your message here" />
+      <button type="submit" id="send-button">Send</button>
+    </form>
+    
+  </body>
+</html>

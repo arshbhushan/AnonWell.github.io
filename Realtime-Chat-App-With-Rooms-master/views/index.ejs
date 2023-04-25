@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AnonWell</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="script.js"></script>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    #room-container {
+      width: 80%;
+      margin: 10rem auto;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 3rem;
+      background-color: #fff;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #room-container div {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-align: left;
+    }
+
+    #room-container a {
+      background-color: #1a58b5;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.8rem;
+      border-radius: 5px;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      margin-left: 1rem;
+      display: inline-block;
+      width: 15%;
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+
+    #room-container a:hover {
+      background-color: #317185;
+    }
+
+
+    form {
+      width: 60%;
+      margin: 2rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    input {
+      padding: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      width: 80%;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+
+
+    button {
+      background-color: #2050a3;
+      color: #fff;
+      border: none;
+      margin-left: 300px;
+      padding: 1rem;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+      position: relative;
+    }
+
+    */ button:hover {
+      background-color: #d0d0d0;
+    }
+
+    .room-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .room-container-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+  margin-left:  900px;
+  padding: 50px;
+}
+
+
+    .room-link {
+      float: left;
+    }
+
+    .message-container {
+      margin-top: 10px;
+    }
+
+    .message {
+      background-color: #eee;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .user {
+      font-weight: bold;
+    }
+
+    .room-container-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .room-link {
+      text-align: right;
+    }
+
+    nav {
+  /* background-color: #4caf50;
+  color: #fff;
+  padding: 10px;*/
+  background-color: #2154b3;
+  color: #fff;
+  display: flex;
+  text-align: center; 
+  justify-content: space-between;
+  padding: 5px; /* Reduced padding */
+  width: 100%;
+  max-width: 1525px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #2485b3;
+}
+      #message-container {
+        width: 80%;
+        max-width: 1200px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About</a></li>
+      <li><a href="/contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div id="room-container">
+    <% Object.keys(rooms).forEach(room=> { %>
+      <div>
+        <%= room %><a href="/<%= room %>">Join</a>
+      </div>
+
+      <br>
+      <% }) %>
+  </div>
+  <!-- <form action="/room" method="POST">
+      <input name="room" type="text" placeholder="Enter room name" required>
+      <button type="submit">Create Room</button>
+    </form> -->
+
+
+</body>
+
+</html>

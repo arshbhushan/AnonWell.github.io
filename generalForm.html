@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/generalForm.css" />
+    <title>General Form</title>
+        <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rubik:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+        <!-- Navbar & Carousel Start -->
+         <div class="container-fluid_position-relative_p-0"> <!--yha class ke bich me underscore dala h -->
+          <nav class="navbar navbar-expand-lg navbar-dark px-5 py-3 py-lg-0">
+            <a href="index.html" class="navbar-brand p-0">
+              <h1 class="m-0"><i class="fa fa-user-tie me-2"></i>AnonWell</h1>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarCollapse"
+            >
+              <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="service.html" class="nav-item nav-link">Services</a>
+    
+                <div class="nav-item dropdown">
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >Pages</a
+                  >
+                  <div class="dropdown-menu m-0">
+                    <a href="price.html" class="dropdown-item">Pricing Plan</a>
+    
+                    <a href="team.html" class="dropdown-item">Our Therapists</a>
+                    <a href="testimonial.html" class="dropdown-item">Reviews</a>
+                    <a href="quote.html" class="dropdown-item">Send Any Query</a>
+                  </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+              </div>
+              <butaton
+                type="button"
+                class="btn text-primary ms-3"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+                ><i class="fa fa-search"></i
+              ></butaton>
+              <a
+                href="Log In Sign Up.html"
+                class="btn btn-primary py-2 px-4 ms-3"
+                >SignUp/LogIn</a
+              >
+            </div>
+          </nav>
+        </div>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Kindly fill this from.</h1>
+        <!-- <p id="description"> -->
+        <!-- Thank you for taking the time to help us to improve the plateform
+        </p> -->
+      </header>
+      <form action="" id="survey-form">
+        <!-- Text section -->
+        <div class="form-group">
+          <label for="name">User Id</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="formControl"
+            placeholder="Enter your User Id"
+            required
+          />
+        </div>
+        <!-- end of Email section -->
+
+        <!-- Type Number section -->
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input
+            type="number"
+            name="phone"
+            id="phone"
+            class="formControl"
+            placeholder="Enter your phone number"
+            required
+          />
+        </div>
+        <!-- end of Number section -->
+
+        <!-- Type Number section -->
+        <div class="form-group">
+          <label for="address"
+            >Address <span class="clue">(optional)</span></label
+          >
+          <input
+            type="text"
+            name="address"
+            id="address"
+            class="formControl"
+            placeholder="Enter your address"
+          />
+        </div>
+        <!--  end of number section -->
+
+        <!-- select section -->
+        <div class="form-group">
+          <p id="quest">
+            Select general form or particular disorder from the dropdown menu:
+          </p>
+          <select name="role" required id="dropdown" class="formControl">
+            <option>General Form</option>
+            <option>Mental Illness</option>
+            <option>Sleep Disorders</option>
+            <option>Anger Issues</option>
+            <option>Anxiety Issues</option>
+            <option>Domestic Violence</option>
+          </select>
+
+        <!-- end of select section -->
+
+        <!-- radio button section -->
+        <div class="form_group">
+          <label for="bb"
+            >1. What are some of the symptoms you experience related to this
+            disorder?</label
+          >
+          <br />
+          <input
+            type="text"
+            id="bb"
+            class="formControl"
+            placeholder="write here"
+          />
+        </div>
+        <div class="form_group">
+          <label for="ww"
+            >2. Have you identified any triggers that worsen your
+            symptoms?</label
+          ><br />
+          <input
+            type="text"
+            id="ww"
+            class="formControl"
+            placeholder="write here"
+          />
+        </div>
+        <div class="form_group">
+          <label for="www">
+            3. Are there any medications you are taking for your disorder? If
+            so, how have they helped?</label
+          ><br />
+          <input
+            type="text"
+            id="www"
+            class="formControl"
+            placeholder="write here"
+          />
+        </div>
+        <div class="form_group">
+          <label for="wwww"> 4. Would you like to tell something.</label><br />
+          <input
+            type="text"
+            id="wwww"
+            class="formControl"
+            placeholder="write here"
+          />
+        </div>
+        <div class="form-group">
+          <p id="quest">Note</p>
+          <textarea
+            name="feedback"
+            cols="30"
+            rows="5"
+            id="feedback"
+            class="textarea"
+            placeholder="Write a note if you want to tell something...  "
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button onclick="location.href='http://127.0.0.1:5501/index.html'" type="submit" id="submit" class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
